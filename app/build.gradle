@@ -1,0 +1,48 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.awakedust_merge"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion = '25.0.2'
+}
+
+repositories {
+    google()
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:28.0.0'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+    implementation 'com.android.support:design:28.0.0-alpha1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'gun0912.ted:tedpermission:2.0.0'
+
+    testCompile 'junit:junit:4.12'
+
+
+}

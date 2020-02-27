@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back">
+
+
+
+    // 중앙 박스 가이드라인
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".083" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.919708" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".30" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/middle_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+        app:layout_constraintRight_toRightOf="@+id/right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline"
+        android:orientation="horizontal"
+        android:background="#444444"
+        android:gravity="center|center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/loc2"
+                android:layout_marginRight="11dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nanumsimple"
+            android:text="장전 2동"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+        app:layout_constraintRight_toRightOf="@+id/right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/middle_guideline"
+        android:orientation="vertical"
+        android:weightSum="12"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="right">
+
+                <ImageView
+                    android:layout_width="83dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center"
+                    android:background="#ffffff"
+                    android:id="@+id/weather"
+                    android:src="@drawable/sunny" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/temper"
+                android:text="19°"
+                android:textSize="39dp"
+                android:gravity="center_vertical"
+                android:background="#ffff"
+                android:fontFamily="@font/nanumsimple"
+                android:textColor="#E6000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textweather"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14dp"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="맑음"
+                android:gravity="right|center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text=",  미세먼지"
+                android:paddingRight="10dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:id="@+id/textmise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="좋음"
+                android:paddingRight="5dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:id="@+id/numbermise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="25"
+                android:textSize="14dp"
+                android:gravity="center|right"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="㎍/㎥"
+                android:textSize="14dp"
+                android:gravity="center|left"
+                android:fontFamily="@font/nanumregular" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#ffff"
+                android:text="맑음"
+                android:textSize="14dp"
+                android:gravity="right|center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="초미세먼지"
+                android:paddingRight="10dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:id="@+id/textchomise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="좋음"
+                android:paddingRight="5dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:id="@+id/numberchomise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="25"
+                android:textSize="14dp"
+                android:gravity="center|right"
+                android:fontFamily="@font/nanumregular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:textColor="#707070"
+                android:text="㎍/㎥"
+                android:textSize="14dp"
+                android:gravity="center|left"
+                android:fontFamily="@font/nanumregular" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:textColor="#707070"
+            android:gravity="center"/>
+
+
+
+
+    </LinearLayout>
+
+    //날짜 가이드라인2
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".29" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".71" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25" />
+
+    <TextView
+        android:id="@+id/todaydate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2019-06-30 월요일"
+        android:fontFamily="@font/nanumsimple"
+        android:textSize="17dp"
+        android:textColor="#ffffff"
+        android:gravity="center|bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/left_guideline"
+        app:layout_constraintRight_toRightOf="@+id/right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".78" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/middle_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".38" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".21" />
+
+    <TextView
+        android:id="@+id/ampm"
+        android:textColor="#ffffff"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="18dp"
+        android:text="오 전"
+        android:fontFamily="@font/nanumregular"
+        android:gravity="center|right"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/left_guideline3"
+        app:layout_constraintRight_toRightOf="@+id/middle_guideline3"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline3" />
+
+    <TextView
+        android:id="@+id/timerightnow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="07:30"
+        android:fontFamily="@font/nanumbold"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/middle_guideline3"
+        app:layout_constraintRight_toRightOf="@+id/right_guideline3"
+        app:layout_constraintTop_toTopOf="@id/top_guideline3"
+        android:textSize="36dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/stopbutton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="중  단"
+        android:textSize="22dp"
+        android:fontFamily="@font/nanumregular"
+        android:textColor="#ffff"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        android:background="@drawable/round" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/loc1" />
+
+                <TextView
+                    android:id="@+id/textAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="금정구 장전동"
+                    android:textColor="#707070"
+                    android:fontFamily="@font/nanumregular"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center|left"
+                android:text="2016-06-01"
+                android:textColor="#000000"
+                android:fontFamily="@font/nanumregular"
+                android:textSize="17dp"/>
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dot"
+                    android:scaleType="fitCenter"
+                    android:background="#ffff"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout> // 위치 및 날짜 및 약관
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="미세먼지"
+                    android:paddingRight="5dp"
+                    android:textSize="13dp"
+                    android:gravity="center|right"
+                    android:fontFamily="@font/nanumsimple"
+                    />
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:text="좋음"
+                    android:id="@+id/mise"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nanumbold"
+                    android:textColor="#ffff"
+                    android:background="#004782"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="초미세먼지"
+                    android:textSize="13dp"
+                    android:gravity="center|right"
+                    android:paddingRight="5dp"
+                    android:fontFamily="@font/nanumsimple"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/chomise"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:text="매우나쁨"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nanumbold"
+                    android:textColor="#ffff"
+                    android:background="#e5a831"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:layout_gravity="center_vertical"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#eaeaea">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:weightSum="10"
+                android:background="@drawable/teduri2"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:text="알 람"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/nanumsimple"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:id="@+id/addAlarm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:src="@drawable/add"
+                    android:background="#00ff0000"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F0F0F0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
